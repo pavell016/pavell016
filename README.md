@@ -13,12 +13,7 @@
     📍 La Salle Gràcia (Plaça del Nord, 14, Gràcia, 08024 Barcelona)
     web - https://gracia.lasalle.cat/es/  
 
-<!-- LANGS:START -->
-
-<!-- LANGS:END -->
-
-<!-- DATE:START -->
-<!-- DATE:END -->
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavell016)](https://github.com/SrGobi/github-readme-stats)
 
 # ![pavell016's Stats](https://github-readme-stats.vercel.app/api?username=pavell016&theme=vue-dark&show_icons=true&hide_border=false&count_private=true)
 
