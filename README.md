@@ -15,7 +15,7 @@
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavell016)](https://github.com/SrGobi/github-readme-stats)
 
-# ![pavell016's Stats](https://github-readme-stats.vercel.app/api?username=pavell016&theme=vue-dark&show_icons=true&hide_border=false&count_private=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pavell016)](https://github.com/SrGobi/github-readme-stats)
 
 <!--
 **pavell016/pavell016** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
