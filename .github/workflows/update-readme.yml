@@ -1,27 +1,41 @@
-name: Update readme with Language Stats
+name: Update Language Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at midnight every day
-  push:
-    branches:
-      - main  # Adjust to match your default branch
+    # Corre todos los días a la medianoche UTC
+    - cron: "0 0 * * *"
 
 jobs:
-  update-readme:
+  update-stats:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
+      # 1. Clona el repositorio
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Update README Language Statistics
-        uses: DimaTc/readme-stats-updater@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 2. Configura el entorno de Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
 
-      - name: Commit changes
+      # 3. Instala dependencias necesarias
+      - name: Install Dependencies
         run: |
-          git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
-          git add README.md
-          git commit -m "Update README with language statistics and last update date" || echo "No changes to commit"
+          python -m pip install --upgrade pip
+          pip install pygithub pandas
+
+      # 4. Ejecuta el script para calcular el uso de lenguajes
+      - name: Run Script
+        run: python update_stats.py
+
+      # 5. Subir cambios al repositorio
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update language stats [skip ci]" || echo "No changes to commit"
           git push
+
