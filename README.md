@@ -13,7 +13,33 @@
     📍 La Salle Gràcia (Plaça del Nord, 14, Gràcia, 08024 Barcelona)
     web - https://gracia.lasalle.cat/es/  
 
-# ![pavell016's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pavell016&theme=vue-dark&show_icons=true&hide_border=false&layout=compact)
+name: Update readme with Language Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight every day
+  push:
+    branches:
+      - main  # Adjust to match your default branch
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update README Language Statistics
+        uses: DimaTc/readme-stats-updater@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add README.md
+          git commit -m "Update README with language statistics and last update date" || echo "No changes to commit"
+          git push
 
 # ![pavell016's Stats](https://github-readme-stats.vercel.app/api?username=pavell016&theme=vue-dark&show_icons=true&hide_border=false&count_private=true)
 
