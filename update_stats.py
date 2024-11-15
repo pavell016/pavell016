@@ -4,8 +4,8 @@ import json
 import pandas as pd
 
 # Tu token personal de GitHub (configura esto como un secreto en GitHub Actions)
-token = os.getenv('GITHUB_TOKEN')
-username = "TU_USUARIO_DE_GITHUB"
+token = os.getenv('update_token')
+username = "pavell016"
 
 g = Github(token)
 user = g.get_user(username)
