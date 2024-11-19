@@ -16,13 +16,13 @@
 # 🛠️ Habilidades Técnicas
 
     Lenguajes de Programación:
-    Java, Python, Kotlin, Bash, SQL.
+    Java, Python, Bash, SQL.
 
     Tecnologías y Herramientas:
-    Docker, VirtualBox, MySQL, PostgreSQL, Git/GitHub, VS Code, IntelliJ IDEA.
+    Docker, VirtualBox, MySQL, Git/GitHub, VS Code, IntelliJ IDEA.
 
     Áreas de Conocimiento:
-    Administración de sistemas Linux/Windows, configuración de redes, virtualización, desarrollo de aplicaciones móviles y de escritorio.
+    Administración de sistemas Linux/Windows, configuración de redes, virtualización.
 
 # 🌟 Logros y Certificaciones
 
